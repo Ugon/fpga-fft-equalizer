@@ -1,0 +1,20 @@
+# => ignore file by extension.
+#.gitignore
+*.rpt
+*.qdf
+*.done
+*.dpf
+*.summary
+*.pin
+*.pof
+#*.qpf
+#*.qsf
+*.qws
+#*.sof
+*.smsg
+*.txt
+db/
+incremental_db/
+simulation/
+
+*.bak
