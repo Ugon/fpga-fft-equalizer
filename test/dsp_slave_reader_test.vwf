@@ -62,16 +62,6 @@ SIGNAL("bclk")
 	PARENT = "";
 }
 
-SIGNAL("transmit")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 SIGNAL("reset_n")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -82,7 +72,7 @@ SIGNAL("reset_n")
 	PARENT = "";
 }
 
-SIGNAL("data_available")
+SIGNAL("sample_available_from_adc")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -92,7 +82,17 @@ SIGNAL("data_available")
 	PARENT = "";
 }
 
-SIGNAL("left_channel")
+SIGNAL("start_transmission")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("left_channel_sample_from_adc")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -102,247 +102,247 @@ SIGNAL("left_channel")
 	PARENT = "";
 }
 
-SIGNAL("left_channel[23]")
+SIGNAL("left_channel_sample_from_adc[23]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[22]")
+SIGNAL("left_channel_sample_from_adc[22]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[21]")
+SIGNAL("left_channel_sample_from_adc[21]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[20]")
+SIGNAL("left_channel_sample_from_adc[20]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[19]")
+SIGNAL("left_channel_sample_from_adc[19]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[18]")
+SIGNAL("left_channel_sample_from_adc[18]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[17]")
+SIGNAL("left_channel_sample_from_adc[17]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[16]")
+SIGNAL("left_channel_sample_from_adc[16]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[15]")
+SIGNAL("left_channel_sample_from_adc[15]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[14]")
+SIGNAL("left_channel_sample_from_adc[14]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[13]")
+SIGNAL("left_channel_sample_from_adc[13]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[12]")
+SIGNAL("left_channel_sample_from_adc[12]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[11]")
+SIGNAL("left_channel_sample_from_adc[11]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[10]")
+SIGNAL("left_channel_sample_from_adc[10]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[9]")
+SIGNAL("left_channel_sample_from_adc[9]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[8]")
+SIGNAL("left_channel_sample_from_adc[8]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[7]")
+SIGNAL("left_channel_sample_from_adc[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[6]")
+SIGNAL("left_channel_sample_from_adc[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[5]")
+SIGNAL("left_channel_sample_from_adc[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[4]")
+SIGNAL("left_channel_sample_from_adc[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[3]")
+SIGNAL("left_channel_sample_from_adc[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[2]")
+SIGNAL("left_channel_sample_from_adc[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[1]")
+SIGNAL("left_channel_sample_from_adc[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("left_channel[0]")
+SIGNAL("left_channel_sample_from_adc[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "left_channel";
+	PARENT = "left_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel")
+SIGNAL("right_channel_sample_from_adc")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -352,264 +352,244 @@ SIGNAL("right_channel")
 	PARENT = "";
 }
 
-SIGNAL("right_channel[23]")
+SIGNAL("right_channel_sample_from_adc[23]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[22]")
+SIGNAL("right_channel_sample_from_adc[22]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[21]")
+SIGNAL("right_channel_sample_from_adc[21]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[20]")
+SIGNAL("right_channel_sample_from_adc[20]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[19]")
+SIGNAL("right_channel_sample_from_adc[19]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[18]")
+SIGNAL("right_channel_sample_from_adc[18]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[17]")
+SIGNAL("right_channel_sample_from_adc[17]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[16]")
+SIGNAL("right_channel_sample_from_adc[16]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[15]")
+SIGNAL("right_channel_sample_from_adc[15]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[14]")
+SIGNAL("right_channel_sample_from_adc[14]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[13]")
+SIGNAL("right_channel_sample_from_adc[13]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[12]")
+SIGNAL("right_channel_sample_from_adc[12]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[11]")
+SIGNAL("right_channel_sample_from_adc[11]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[10]")
+SIGNAL("right_channel_sample_from_adc[10]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[9]")
+SIGNAL("right_channel_sample_from_adc[9]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[8]")
+SIGNAL("right_channel_sample_from_adc[8]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[7]")
+SIGNAL("right_channel_sample_from_adc[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[6]")
+SIGNAL("right_channel_sample_from_adc[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[5]")
+SIGNAL("right_channel_sample_from_adc[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[4]")
+SIGNAL("right_channel_sample_from_adc[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[3]")
+SIGNAL("right_channel_sample_from_adc[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[2]")
+SIGNAL("right_channel_sample_from_adc[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[1]")
+SIGNAL("right_channel_sample_from_adc[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
+	PARENT = "right_channel_sample_from_adc";
 }
 
-SIGNAL("right_channel[0]")
+SIGNAL("right_channel_sample_from_adc[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "right_channel";
-}
-
-SIGNAL("state.available_data")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = BURIED;
-	PARENT = "";
-}
-
-SIGNAL("state.receive_data")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = BURIED;
-	PARENT = "";
+	PARENT = "right_channel_sample_from_adc";
 }
 
 TRANSITION_LIST("adcdat")
@@ -617,21 +597,17 @@ TRANSITION_LIST("adcdat")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 120.0;
+		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 8880.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 360.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 9380.0;
 	}
 }
 
@@ -640,13 +616,11 @@ TRANSITION_LIST("adclrc")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
+		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 100.0;
+		LEVEL 0 FOR 1380.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 1060.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 8760.0;
+		LEVEL 0 FOR 8520.0;
 	}
 }
 
@@ -664,16 +638,6 @@ TRANSITION_LIST("bclk")
 	}
 }
 
-TRANSITION_LIST("transmit")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 9950.0;
-	}
-}
-
 TRANSITION_LIST("reset_n")
 {
 	NODE
@@ -683,7 +647,7 @@ TRANSITION_LIST("reset_n")
 	}
 }
 
-TRANSITION_LIST("data_available")
+TRANSITION_LIST("sample_available_from_adc")
 {
 	NODE
 	{
@@ -692,7 +656,17 @@ TRANSITION_LIST("data_available")
 	}
 }
 
-TRANSITION_LIST("left_channel[23]")
+TRANSITION_LIST("start_transmission")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 9970.0;
+	}
+}
+
+TRANSITION_LIST("left_channel_sample_from_adc[23]")
 {
 	NODE
 	{
@@ -701,7 +675,7 @@ TRANSITION_LIST("left_channel[23]")
 	}
 }
 
-TRANSITION_LIST("left_channel[22]")
+TRANSITION_LIST("left_channel_sample_from_adc[22]")
 {
 	NODE
 	{
@@ -710,7 +684,7 @@ TRANSITION_LIST("left_channel[22]")
 	}
 }
 
-TRANSITION_LIST("left_channel[21]")
+TRANSITION_LIST("left_channel_sample_from_adc[21]")
 {
 	NODE
 	{
@@ -719,7 +693,7 @@ TRANSITION_LIST("left_channel[21]")
 	}
 }
 
-TRANSITION_LIST("left_channel[20]")
+TRANSITION_LIST("left_channel_sample_from_adc[20]")
 {
 	NODE
 	{
@@ -728,7 +702,7 @@ TRANSITION_LIST("left_channel[20]")
 	}
 }
 
-TRANSITION_LIST("left_channel[19]")
+TRANSITION_LIST("left_channel_sample_from_adc[19]")
 {
 	NODE
 	{
@@ -737,7 +711,7 @@ TRANSITION_LIST("left_channel[19]")
 	}
 }
 
-TRANSITION_LIST("left_channel[18]")
+TRANSITION_LIST("left_channel_sample_from_adc[18]")
 {
 	NODE
 	{
@@ -746,7 +720,7 @@ TRANSITION_LIST("left_channel[18]")
 	}
 }
 
-TRANSITION_LIST("left_channel[17]")
+TRANSITION_LIST("left_channel_sample_from_adc[17]")
 {
 	NODE
 	{
@@ -755,7 +729,7 @@ TRANSITION_LIST("left_channel[17]")
 	}
 }
 
-TRANSITION_LIST("left_channel[16]")
+TRANSITION_LIST("left_channel_sample_from_adc[16]")
 {
 	NODE
 	{
@@ -764,7 +738,7 @@ TRANSITION_LIST("left_channel[16]")
 	}
 }
 
-TRANSITION_LIST("left_channel[15]")
+TRANSITION_LIST("left_channel_sample_from_adc[15]")
 {
 	NODE
 	{
@@ -773,7 +747,7 @@ TRANSITION_LIST("left_channel[15]")
 	}
 }
 
-TRANSITION_LIST("left_channel[14]")
+TRANSITION_LIST("left_channel_sample_from_adc[14]")
 {
 	NODE
 	{
@@ -782,7 +756,7 @@ TRANSITION_LIST("left_channel[14]")
 	}
 }
 
-TRANSITION_LIST("left_channel[13]")
+TRANSITION_LIST("left_channel_sample_from_adc[13]")
 {
 	NODE
 	{
@@ -791,7 +765,7 @@ TRANSITION_LIST("left_channel[13]")
 	}
 }
 
-TRANSITION_LIST("left_channel[12]")
+TRANSITION_LIST("left_channel_sample_from_adc[12]")
 {
 	NODE
 	{
@@ -800,7 +774,7 @@ TRANSITION_LIST("left_channel[12]")
 	}
 }
 
-TRANSITION_LIST("left_channel[11]")
+TRANSITION_LIST("left_channel_sample_from_adc[11]")
 {
 	NODE
 	{
@@ -809,7 +783,7 @@ TRANSITION_LIST("left_channel[11]")
 	}
 }
 
-TRANSITION_LIST("left_channel[10]")
+TRANSITION_LIST("left_channel_sample_from_adc[10]")
 {
 	NODE
 	{
@@ -818,7 +792,7 @@ TRANSITION_LIST("left_channel[10]")
 	}
 }
 
-TRANSITION_LIST("left_channel[9]")
+TRANSITION_LIST("left_channel_sample_from_adc[9]")
 {
 	NODE
 	{
@@ -827,7 +801,7 @@ TRANSITION_LIST("left_channel[9]")
 	}
 }
 
-TRANSITION_LIST("left_channel[8]")
+TRANSITION_LIST("left_channel_sample_from_adc[8]")
 {
 	NODE
 	{
@@ -836,7 +810,7 @@ TRANSITION_LIST("left_channel[8]")
 	}
 }
 
-TRANSITION_LIST("left_channel[7]")
+TRANSITION_LIST("left_channel_sample_from_adc[7]")
 {
 	NODE
 	{
@@ -845,7 +819,7 @@ TRANSITION_LIST("left_channel[7]")
 	}
 }
 
-TRANSITION_LIST("left_channel[6]")
+TRANSITION_LIST("left_channel_sample_from_adc[6]")
 {
 	NODE
 	{
@@ -854,7 +828,7 @@ TRANSITION_LIST("left_channel[6]")
 	}
 }
 
-TRANSITION_LIST("left_channel[5]")
+TRANSITION_LIST("left_channel_sample_from_adc[5]")
 {
 	NODE
 	{
@@ -863,7 +837,7 @@ TRANSITION_LIST("left_channel[5]")
 	}
 }
 
-TRANSITION_LIST("left_channel[4]")
+TRANSITION_LIST("left_channel_sample_from_adc[4]")
 {
 	NODE
 	{
@@ -872,7 +846,7 @@ TRANSITION_LIST("left_channel[4]")
 	}
 }
 
-TRANSITION_LIST("left_channel[3]")
+TRANSITION_LIST("left_channel_sample_from_adc[3]")
 {
 	NODE
 	{
@@ -881,7 +855,7 @@ TRANSITION_LIST("left_channel[3]")
 	}
 }
 
-TRANSITION_LIST("left_channel[2]")
+TRANSITION_LIST("left_channel_sample_from_adc[2]")
 {
 	NODE
 	{
@@ -890,7 +864,7 @@ TRANSITION_LIST("left_channel[2]")
 	}
 }
 
-TRANSITION_LIST("left_channel[1]")
+TRANSITION_LIST("left_channel_sample_from_adc[1]")
 {
 	NODE
 	{
@@ -899,7 +873,7 @@ TRANSITION_LIST("left_channel[1]")
 	}
 }
 
-TRANSITION_LIST("left_channel[0]")
+TRANSITION_LIST("left_channel_sample_from_adc[0]")
 {
 	NODE
 	{
@@ -908,7 +882,7 @@ TRANSITION_LIST("left_channel[0]")
 	}
 }
 
-TRANSITION_LIST("right_channel[23]")
+TRANSITION_LIST("right_channel_sample_from_adc[23]")
 {
 	NODE
 	{
@@ -917,7 +891,7 @@ TRANSITION_LIST("right_channel[23]")
 	}
 }
 
-TRANSITION_LIST("right_channel[22]")
+TRANSITION_LIST("right_channel_sample_from_adc[22]")
 {
 	NODE
 	{
@@ -926,7 +900,7 @@ TRANSITION_LIST("right_channel[22]")
 	}
 }
 
-TRANSITION_LIST("right_channel[21]")
+TRANSITION_LIST("right_channel_sample_from_adc[21]")
 {
 	NODE
 	{
@@ -935,7 +909,7 @@ TRANSITION_LIST("right_channel[21]")
 	}
 }
 
-TRANSITION_LIST("right_channel[20]")
+TRANSITION_LIST("right_channel_sample_from_adc[20]")
 {
 	NODE
 	{
@@ -944,7 +918,7 @@ TRANSITION_LIST("right_channel[20]")
 	}
 }
 
-TRANSITION_LIST("right_channel[19]")
+TRANSITION_LIST("right_channel_sample_from_adc[19]")
 {
 	NODE
 	{
@@ -953,7 +927,7 @@ TRANSITION_LIST("right_channel[19]")
 	}
 }
 
-TRANSITION_LIST("right_channel[18]")
+TRANSITION_LIST("right_channel_sample_from_adc[18]")
 {
 	NODE
 	{
@@ -962,7 +936,7 @@ TRANSITION_LIST("right_channel[18]")
 	}
 }
 
-TRANSITION_LIST("right_channel[17]")
+TRANSITION_LIST("right_channel_sample_from_adc[17]")
 {
 	NODE
 	{
@@ -971,7 +945,7 @@ TRANSITION_LIST("right_channel[17]")
 	}
 }
 
-TRANSITION_LIST("right_channel[16]")
+TRANSITION_LIST("right_channel_sample_from_adc[16]")
 {
 	NODE
 	{
@@ -980,7 +954,7 @@ TRANSITION_LIST("right_channel[16]")
 	}
 }
 
-TRANSITION_LIST("right_channel[15]")
+TRANSITION_LIST("right_channel_sample_from_adc[15]")
 {
 	NODE
 	{
@@ -989,7 +963,7 @@ TRANSITION_LIST("right_channel[15]")
 	}
 }
 
-TRANSITION_LIST("right_channel[14]")
+TRANSITION_LIST("right_channel_sample_from_adc[14]")
 {
 	NODE
 	{
@@ -998,7 +972,7 @@ TRANSITION_LIST("right_channel[14]")
 	}
 }
 
-TRANSITION_LIST("right_channel[13]")
+TRANSITION_LIST("right_channel_sample_from_adc[13]")
 {
 	NODE
 	{
@@ -1007,7 +981,7 @@ TRANSITION_LIST("right_channel[13]")
 	}
 }
 
-TRANSITION_LIST("right_channel[12]")
+TRANSITION_LIST("right_channel_sample_from_adc[12]")
 {
 	NODE
 	{
@@ -1016,7 +990,7 @@ TRANSITION_LIST("right_channel[12]")
 	}
 }
 
-TRANSITION_LIST("right_channel[11]")
+TRANSITION_LIST("right_channel_sample_from_adc[11]")
 {
 	NODE
 	{
@@ -1025,7 +999,7 @@ TRANSITION_LIST("right_channel[11]")
 	}
 }
 
-TRANSITION_LIST("right_channel[10]")
+TRANSITION_LIST("right_channel_sample_from_adc[10]")
 {
 	NODE
 	{
@@ -1034,7 +1008,7 @@ TRANSITION_LIST("right_channel[10]")
 	}
 }
 
-TRANSITION_LIST("right_channel[9]")
+TRANSITION_LIST("right_channel_sample_from_adc[9]")
 {
 	NODE
 	{
@@ -1043,7 +1017,7 @@ TRANSITION_LIST("right_channel[9]")
 	}
 }
 
-TRANSITION_LIST("right_channel[8]")
+TRANSITION_LIST("right_channel_sample_from_adc[8]")
 {
 	NODE
 	{
@@ -1052,7 +1026,7 @@ TRANSITION_LIST("right_channel[8]")
 	}
 }
 
-TRANSITION_LIST("right_channel[7]")
+TRANSITION_LIST("right_channel_sample_from_adc[7]")
 {
 	NODE
 	{
@@ -1061,7 +1035,7 @@ TRANSITION_LIST("right_channel[7]")
 	}
 }
 
-TRANSITION_LIST("right_channel[6]")
+TRANSITION_LIST("right_channel_sample_from_adc[6]")
 {
 	NODE
 	{
@@ -1070,7 +1044,7 @@ TRANSITION_LIST("right_channel[6]")
 	}
 }
 
-TRANSITION_LIST("right_channel[5]")
+TRANSITION_LIST("right_channel_sample_from_adc[5]")
 {
 	NODE
 	{
@@ -1079,7 +1053,7 @@ TRANSITION_LIST("right_channel[5]")
 	}
 }
 
-TRANSITION_LIST("right_channel[4]")
+TRANSITION_LIST("right_channel_sample_from_adc[4]")
 {
 	NODE
 	{
@@ -1088,7 +1062,7 @@ TRANSITION_LIST("right_channel[4]")
 	}
 }
 
-TRANSITION_LIST("right_channel[3]")
+TRANSITION_LIST("right_channel_sample_from_adc[3]")
 {
 	NODE
 	{
@@ -1097,7 +1071,7 @@ TRANSITION_LIST("right_channel[3]")
 	}
 }
 
-TRANSITION_LIST("right_channel[2]")
+TRANSITION_LIST("right_channel_sample_from_adc[2]")
 {
 	NODE
 	{
@@ -1106,7 +1080,7 @@ TRANSITION_LIST("right_channel[2]")
 	}
 }
 
-TRANSITION_LIST("right_channel[1]")
+TRANSITION_LIST("right_channel_sample_from_adc[1]")
 {
 	NODE
 	{
@@ -1115,36 +1089,18 @@ TRANSITION_LIST("right_channel[1]")
 	}
 }
 
-TRANSITION_LIST("right_channel[0]")
+TRANSITION_LIST("right_channel_sample_from_adc[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
 		LEVEL X FOR 10000.0;
-	}
-}
-
-TRANSITION_LIST("state.available_data")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL U FOR 10000.0;
-	}
-}
-
-TRANSITION_LIST("state.receive_data")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL U FOR 10000.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "bclk";
+	CHANNEL = "reset_n";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 0;
@@ -1153,7 +1109,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "adclrc";
+	CHANNEL = "bclk";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 1;
@@ -1162,7 +1118,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "adcdat";
+	CHANNEL = "adclrc";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 2;
@@ -1171,7 +1127,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "transmit";
+	CHANNEL = "adcdat";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 3;
@@ -1180,7 +1136,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "reset_n";
+	CHANNEL = "start_transmission";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 4;
@@ -1189,7 +1145,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_available";
+	CHANNEL = "sample_available_from_adc";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 5;
@@ -1198,7 +1154,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel";
+	CHANNEL = "left_channel_sample_from_adc";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 6;
@@ -1208,7 +1164,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[23]";
+	CHANNEL = "left_channel_sample_from_adc[23]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 7;
@@ -1218,7 +1174,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[22]";
+	CHANNEL = "left_channel_sample_from_adc[22]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 8;
@@ -1228,7 +1184,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[21]";
+	CHANNEL = "left_channel_sample_from_adc[21]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 9;
@@ -1238,7 +1194,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[20]";
+	CHANNEL = "left_channel_sample_from_adc[20]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 10;
@@ -1248,7 +1204,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[19]";
+	CHANNEL = "left_channel_sample_from_adc[19]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 11;
@@ -1258,7 +1214,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[18]";
+	CHANNEL = "left_channel_sample_from_adc[18]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 12;
@@ -1268,7 +1224,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[17]";
+	CHANNEL = "left_channel_sample_from_adc[17]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 13;
@@ -1278,7 +1234,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[16]";
+	CHANNEL = "left_channel_sample_from_adc[16]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 14;
@@ -1288,7 +1244,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[15]";
+	CHANNEL = "left_channel_sample_from_adc[15]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 15;
@@ -1298,7 +1254,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[14]";
+	CHANNEL = "left_channel_sample_from_adc[14]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 16;
@@ -1308,7 +1264,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[13]";
+	CHANNEL = "left_channel_sample_from_adc[13]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 17;
@@ -1318,7 +1274,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[12]";
+	CHANNEL = "left_channel_sample_from_adc[12]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 18;
@@ -1328,7 +1284,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[11]";
+	CHANNEL = "left_channel_sample_from_adc[11]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 19;
@@ -1338,7 +1294,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[10]";
+	CHANNEL = "left_channel_sample_from_adc[10]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 20;
@@ -1348,7 +1304,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[9]";
+	CHANNEL = "left_channel_sample_from_adc[9]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 21;
@@ -1358,7 +1314,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[8]";
+	CHANNEL = "left_channel_sample_from_adc[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 22;
@@ -1368,7 +1324,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[7]";
+	CHANNEL = "left_channel_sample_from_adc[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 23;
@@ -1378,7 +1334,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[6]";
+	CHANNEL = "left_channel_sample_from_adc[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 24;
@@ -1388,7 +1344,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[5]";
+	CHANNEL = "left_channel_sample_from_adc[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 25;
@@ -1398,7 +1354,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[4]";
+	CHANNEL = "left_channel_sample_from_adc[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 26;
@@ -1408,7 +1364,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[3]";
+	CHANNEL = "left_channel_sample_from_adc[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 27;
@@ -1418,7 +1374,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[2]";
+	CHANNEL = "left_channel_sample_from_adc[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 28;
@@ -1428,7 +1384,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[1]";
+	CHANNEL = "left_channel_sample_from_adc[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 29;
@@ -1438,7 +1394,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "left_channel[0]";
+	CHANNEL = "left_channel_sample_from_adc[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 30;
@@ -1448,7 +1404,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel";
+	CHANNEL = "right_channel_sample_from_adc";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 31;
@@ -1458,7 +1414,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[23]";
+	CHANNEL = "right_channel_sample_from_adc[23]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 32;
@@ -1468,7 +1424,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[22]";
+	CHANNEL = "right_channel_sample_from_adc[22]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 33;
@@ -1478,7 +1434,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[21]";
+	CHANNEL = "right_channel_sample_from_adc[21]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 34;
@@ -1488,7 +1444,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[20]";
+	CHANNEL = "right_channel_sample_from_adc[20]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 35;
@@ -1498,7 +1454,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[19]";
+	CHANNEL = "right_channel_sample_from_adc[19]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 36;
@@ -1508,7 +1464,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[18]";
+	CHANNEL = "right_channel_sample_from_adc[18]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 37;
@@ -1518,7 +1474,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[17]";
+	CHANNEL = "right_channel_sample_from_adc[17]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 38;
@@ -1528,7 +1484,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[16]";
+	CHANNEL = "right_channel_sample_from_adc[16]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 39;
@@ -1538,7 +1494,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[15]";
+	CHANNEL = "right_channel_sample_from_adc[15]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 40;
@@ -1548,7 +1504,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[14]";
+	CHANNEL = "right_channel_sample_from_adc[14]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 41;
@@ -1558,7 +1514,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[13]";
+	CHANNEL = "right_channel_sample_from_adc[13]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 42;
@@ -1568,7 +1524,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[12]";
+	CHANNEL = "right_channel_sample_from_adc[12]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 43;
@@ -1578,7 +1534,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[11]";
+	CHANNEL = "right_channel_sample_from_adc[11]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 44;
@@ -1588,7 +1544,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[10]";
+	CHANNEL = "right_channel_sample_from_adc[10]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 45;
@@ -1598,7 +1554,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[9]";
+	CHANNEL = "right_channel_sample_from_adc[9]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 46;
@@ -1608,7 +1564,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[8]";
+	CHANNEL = "right_channel_sample_from_adc[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 47;
@@ -1618,7 +1574,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[7]";
+	CHANNEL = "right_channel_sample_from_adc[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 48;
@@ -1628,7 +1584,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[6]";
+	CHANNEL = "right_channel_sample_from_adc[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 49;
@@ -1638,7 +1594,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[5]";
+	CHANNEL = "right_channel_sample_from_adc[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 50;
@@ -1648,7 +1604,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[4]";
+	CHANNEL = "right_channel_sample_from_adc[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 51;
@@ -1658,7 +1614,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[3]";
+	CHANNEL = "right_channel_sample_from_adc[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 52;
@@ -1668,7 +1624,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[2]";
+	CHANNEL = "right_channel_sample_from_adc[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 53;
@@ -1678,7 +1634,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[1]";
+	CHANNEL = "right_channel_sample_from_adc[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 54;
@@ -1688,7 +1644,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "right_channel[0]";
+	CHANNEL = "right_channel_sample_from_adc[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 55;
@@ -1696,27 +1652,9 @@ DISPLAY_LINE
 	PARENT = 31;
 }
 
-DISPLAY_LINE
-{
-	CHANNEL = "state.available_data";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = ASCII;
-	TREE_INDEX = 56;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "state.receive_data";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = ASCII;
-	TREE_INDEX = 57;
-	TREE_LEVEL = 0;
-}
-
 TIME_BAR
 {
-	TIME = 1110000;
+	TIME = 1020000;
 	MASTER = TRUE;
 }
 ;

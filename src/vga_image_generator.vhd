@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity vga_image_generator is
 	generic (
 		vertical_axis:               integer := 128;
-		horizontal_input_axis:       integer := 128;
+		horizontal_input_axis:       integer := 128 + 256;
 		horizontal_output_re_axis:   integer := 128 + 256;
 		horizontal_output_im_axis:   integer := 128 + 256 + 256;
 
@@ -76,7 +76,7 @@ begin
 	process(reset_n, disp_enabled, row, column)
 		variable input_sample_start_index:       integer                              := 0;
 		variable input_sample_full_value:        signed(bits_per_sample - 1 downto 0) := to_signed(0, bits_per_sample);
-		variable input_sample_reduced_value:     signed(6 downto 0)                   := to_signed(0, 7);
+		variable input_sample_reduced_value:     signed(23 downto 0)                   := to_signed(0, 24); ---changed
 		variable input_sample_int_value:         integer                              := 0;
 	begin
 		if (reset_n = '0' or disp_enabled = '0') then
@@ -100,9 +100,10 @@ begin
 				for i in bits_per_sample - 1 downto 0 loop
 					input_sample_full_value(i) := input_samples_int(input_sample_start_index + i);
 				end loop;
-				input_sample_reduced_value := input_sample_full_value(bits_per_sample - 1 downto bits_per_sample - 7);
-				input_sample_int_value     := to_integer(input_sample_reduced_value);
-
+--				input_sample_reduced_value := --input_sample_full_value(bits_per_sample - 1 downto bits_per_sample - 7);
+--				input_sample_int_value     := to_integer(input_sample_reduced_value);
+--
+				input_sample_int_value := to_integer(input_sample_full_value);
 				if (input_sample_int_value + horizontal_input_axis = row) then
 					red_points   <= (others => '1');
 					green_points <= (others => '1');

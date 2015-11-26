@@ -1,0 +1,965 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lef",
+				"vector_left"
+			],
+			[
+				"samp",
+				"samples_remaining"
+			],
+			[
+				"vec",
+				"vector_left_int"
+			],
+			[
+				"sam",
+				"samples_remaining"
+			],
+			[
+				"AUD",
+				"AUD_BCLK"
+			],
+			[
+				"sampl",
+				"sample_available_from_adc_signal"
+			],
+			[
+				"clk",
+				"clk_1kHz"
+			],
+			[
+				"bit",
+				"bits_per_sample"
+			],
+			[
+				"to",
+				"to_unsigned"
+			],
+			[
+				"in",
+				"integer"
+			],
+			[
+				"bi",
+				"bits_remaining"
+			],
+			[
+				"red",
+				"redirecting2"
+			],
+			[
+				"std",
+				"std_logic"
+			],
+			[
+				"1k",
+				"1khzsample"
+			],
+			[
+				"sd",
+				"std_logic"
+			],
+			[
+				"ri",
+				"right_channel_sample_to_dac_latched"
+			],
+			[
+				"dac",
+				"dacdat"
+			],
+			[
+				"da",
+				"dacdat"
+			],
+			[
+				"redi",
+				"redirecting"
+			],
+			[
+				"whe",
+				"when"
+			],
+			[
+				"las",
+				"last_sample_available"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"st",
+				"std_logic_vector"
+			],
+			[
+				"test_",
+				"test_sample_to_dac"
+			],
+			[
+				"te",
+				"test_low_sample"
+			],
+			[
+				"tests",
+				"test_sample_to_dac"
+			],
+			[
+				"test",
+				"test_high_sample"
+			],
+			[
+				"tes",
+				"test_1khz_clk"
+			],
+			[
+				"num",
+				"number_of_samples"
+			],
+			[
+				"re",
+				"reversed"
+			],
+			[
+				"out",
+				"out_re"
+			],
+			[
+				"mid",
+				"mid_re_shuffle"
+			],
+			[
+				"nu",
+				"number_of_samples_exp"
+			],
+			[
+				"siz",
+				"size_exp"
+			],
+			[
+				"p",
+				"process"
+			],
+			[
+				"size",
+				"size_exp"
+			],
+			[
+				"si",
+				"size_exp"
+			],
+			[
+				"inp",
+				"input_im_neg"
+			],
+			[
+				"sa",
+				"samples"
+			],
+			[
+				"ou",
+				"output_re2"
+			],
+			[
+				"or",
+				"output_re2"
+			],
+			[
+				"mul",
+				"multed_array_re"
+			],
+			[
+				"sum",
+				"summed_array_im"
+			],
+			[
+				"tw",
+				"tw_re"
+			],
+			[
+				"multed",
+				"multed1"
+			],
+			[
+				"ine",
+				"input_re"
+			],
+			[
+				"mult",
+				"multed_array"
+			],
+			[
+				"afterss",
+				"after_stage_1sum_re"
+			],
+			[
+				"afters1m",
+				"after_stage_1mult_re"
+			],
+			[
+				"aft",
+				"after_stage_1sum_re"
+			],
+			[
+				"afs1s",
+				"after_stage_1sum_re"
+			],
+			[
+				"ouna",
+				"output_nautral_order_re"
+			],
+			[
+				"pl",
+				"plus0"
+			],
+			[
+				"ff",
+				"fft_16_impl"
+			],
+			[
+				"ar",
+				"architecture"
+			],
+			[
+				"pa",
+				"package"
+			],
+			[
+				"i",
+				"ieee"
+			],
+			[
+				"oLED",
+				"oLEDR"
+			],
+			[
+				"ADC",
+				"AUD_ADCLRCK"
+			],
+			[
+				"AU",
+				"AUD_BCLK"
+			],
+			[
+				"rec",
+				"record_signal"
+			],
+			[
+				"GPIO",
+				"GPIO_0"
+			],
+			[
+				"dbg_dac",
+				"dbg_dacdat_signal"
+			],
+			[
+				"dbg_",
+				"dbg_adcdat_signal"
+			],
+			[
+				"dbg_da",
+				"dbg_dacdat_signal"
+			],
+			[
+				"dbg_adc",
+				"dbg_adcdat_signal"
+			],
+			[
+				"cl",
+				"clk_1kHz"
+			],
+			[
+				"MC",
+				"mclk_18MHz"
+			],
+			[
+				"AUD_",
+				"AUD_DACLRCK"
+			],
+			[
+				"bcl",
+				"bclk_counter"
+			],
+			[
+				"sl",
+				"slow_lrc"
+			],
+			[
+				"co",
+				"counter"
+			],
+			[
+				"sta",
+				"state_dbg_signal"
+			],
+			[
+				"pr",
+				"programming_done"
+			],
+			[
+				"tr",
+				"transmitting_channels"
+			],
+			[
+				"trans",
+				"transmitting_channels"
+			],
+			[
+				"tra",
+				"transmitting_channels"
+			],
+			[
+				"la",
+				"last_sample_used"
+			],
+			[
+				"left",
+				"left_channel_sample_to_dac"
+			],
+			[
+				"begin",
+				"begin_sending"
+			],
+			[
+				"wh",
+				"when"
+			],
+			[
+				"stat",
+				"state_dbg"
+			],
+			[
+				"le",
+				"left_buffer"
+			],
+			[
+				"rig",
+				"right_channel_sample_to_dac"
+			],
+			[
+				"sen",
+				"sending_data_left"
+			],
+			[
+				"rising",
+				"rising_edge"
+			],
+			[
+				"oAUD",
+				"oAUD_DACDAT"
+			],
+			[
+				"A",
+				"AUD_DACLRCK"
+			],
+			[
+				"w",
+				"waiting_for_daclrc"
+			],
+			[
+				"data",
+				"data_to_send_int"
+			],
+			[
+				"start",
+				"start_signal_int"
+			],
+			[
+				"I2C",
+				"i2c_sdat"
+			],
+			[
+				"I2",
+				"oI2C_SCLK"
+			],
+			[
+				"reset",
+				"reset_n"
+			],
+			[
+				"inpuint",
+				"input_samples_int"
+			],
+			[
+				"avai",
+				"vector_available_signal"
+			],
+			[
+				"right",
+				"right_channel_signal"
+			],
+			[
+				"res",
+				"reset_n_signal"
+			],
+			[
+				"righ",
+				"right_channel_signal"
+			],
+			[
+				"blu",
+				"blue_points"
+			],
+			[
+				"inpl",
+				"input_sample_value"
+			],
+			[
+				"gree",
+				"green_points"
+			],
+			[
+				"fini",
+				"finished_config"
+			],
+			[
+				"i2c",
+				"i2c_transmission_start"
+			],
+			[
+				"i2",
+				"i2c_transmission_start"
+			],
+			[
+				"star",
+				"start_operation"
+			],
+			[
+				"adc",
+				"adclrc"
+			],
+			[
+				"add",
+				"address_int"
+			],
+			[
+				"address",
+				"address_int"
+			],
+			[
+				"risin",
+				"rising_edge"
+			],
+			[
+				"ava",
+				"available_data"
+			],
+			[
+				"rece",
+				"received_data_int"
+			],
+			[
+				"as",
+				"ack_address"
+			],
+			[
+				"send_",
+				"send_write_bit"
+			],
+			[
+				"ack",
+				"master_ack"
+			],
+			[
+				"byt",
+				"byte1_int"
+			],
+			[
+				"stop",
+				"stop_signal"
+			],
+			[
+				"t",
+				"transmission_succeded"
+			],
+			[
+				"on",
+				"transmission_ongoing"
+			],
+			[
+				"i2s",
+				"i2c_sdat"
+			],
+			[
+				"ris",
+				"rising_edge"
+			],
+			[
+				"slave",
+				"slave_ack1"
+			],
+			[
+				"end",
+				"end_sequence_length"
+			],
+			[
+				"col",
+				"column_signal"
+			],
+			[
+				"ro",
+				"row_signal"
+			],
+			[
+				"di",
+				"disp_enabled_signal"
+			],
+			[
+				"en",
+				"entity"
+			],
+			[
+				"els",
+				"elsif	elsif"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/top.vhd",
+			"settings":
+			{
+				"buffer_size": 11147,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fft_input_former.vhd",
+			"settings":
+			{
+				"buffer_size": 3211,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fft_output_former.vhd",
+			"settings":
+			{
+				"buffer_size": 3282,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"packinst",
+				"Package Control: Install Package"
+			],
+			[
+				"package con",
+				"Package Control: Add Repository"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"package control",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"packade",
+				"Package Control: Advanced Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 209.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/input_vector_former.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/testing_top.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/redirector.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/dsp_slave_reader.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/dsp_slave_writer.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/mw8731_controller.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/i2c_master_writer.vhd",
+		"/G/Pachuta Wojciech/dsp_slave_writer.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/ifft_dit.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/fft_twiddle_factors_16.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/fft_16.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/fft_utils.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/testing_fft.vhd",
+		"/D/Downloads/twiddle16.m",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/top.vhd",
+		"/C/Users/Ugon/Desktop/bup",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/fft_twiddle_factors_256.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/fft_twidle_factors_16.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/vga_controller.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/vga_image_generator.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/i2c_clk_prescaler.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/redirecter.vhd",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/quartus/top.qsf",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/quartus/.gitignore",
+		"/D/Studia/Semestr 5/TM2/fpga-fft/fpga-fft/src/wm8731_pll/wm8731_pll_inst.vhd",
+		"/D/Studia/Semestr 5/TM2/FFT/fft_input_vector_former.vhd",
+		"/D/Studia/Semestr 5/TM2/FFT/mw8731_controller.vhd",
+		"/D/Studia/Semestr 5/TM2/FFT/dsp_slave_reader.vhd",
+		"/D/Studia/Semestr 5/TM2/FFT/i2c_clk_prescaler.vhd",
+		"/D/Studia/Semestr 5/TM2/FFT/i2c_master_writer.vhd",
+		"/D/Studia/Semestr 5/TM2/FFT/vga_image_generator.vhd",
+		"/D/Studia/Semestr 5/TM2/FFT/vga_controller.vhd",
+		"/D/Studia/Semestr 5/TM2/FFT/fft_top.vhd",
+		"/G/Pachuta Wojciech mail.txt",
+		"/C/Users/Ugon/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/Downloads/DE2_70.qsf.txt",
+		"/C/Users/Ugon/Desktop/stuufs.txt",
+		"/C/Users/Ugon/Desktop/dupa.txt",
+		"/H/Programy/Windows 10 PC/Key.txt",
+		"/D/Downloads/automaty-egzamin (1).txt",
+		"/D/Downloads/do_wkucia_2.txt",
+		"/D/Downloads/automaty-egzamin-90.txt",
+		"/D/Downloads/response GET users-10-friends.json",
+		"/C/Users/Ugon/Desktop/backup psi bs.tex",
+		"/C/Users/Ugon/Desktop/cw04/zad1/src/potomek.c",
+		"/C/Users/Ugon/Desktop/cw04/zad1/src/przodek.c",
+		"/C/Users/Ugon/Desktop/cw04/zad2/makefile",
+		"/C/Users/Ugon/AppData/Local/Temp/Rar$DIa0.679/readerswriters.c",
+		"/C/Users/Ugon/AppData/Local/Temp/Rar$DIa0.048/rozw_7.c",
+		"/D/Downloads/psi-12-06-2015 (1)",
+		"/D/Downloads/psi-12-06-2015",
+		"/D/Downloads/response PUT users-{userId}-friends (1).json",
+		"/C/Users/Ugon/Desktop/person.csv",
+		"/D/development/bazy-danych-projekt/db-data-generator/src/main/resources/generated-data-reservations.sql",
+		"/D/development/bazy-danych-projekt/db-data-generator/src/main/resources/generated-data-reservations0.sql",
+		"/D/development/bazy-danych-projekt/db-data-generator/src/main/resources/output/generated-data-conferences.sql",
+		"/D/Downloads/response GET users-{userId}-groups (1).json",
+		"/D/Downloads/request PUT users-{userId}-friends (2).json",
+		"/D/Downloads/response GET users-{userId}-information-public (1).json"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fft_input_former_impl",
+			"fft_input_former",
+			"i",
+			"sample_available_from_adc",
+			"bits_per_sample",
+			"bits_remaining",
+			"vector_available",
+			"input_vector_former",
+			"input_vector_former_impl",
+			"input_vector_former",
+			"sample_available_from_adc",
+			"test",
+			"clk_1kHz",
+			"dacdat",
+			"adcdat",
+			"dacdatout",
+			"clk_1kHz",
+			"clk1khz",
+			"oAUD_DACDAT",
+			"bclk_counter",
+			"dbg_bclk_signal",
+			"bclk",
+			"transmission_to_dac_ongoing",
+			"1khzsample",
+			"sample_available_to_dac",
+			"left_channel_sample_to_dac_int",
+			"left_channel_sample_to_dac_latched",
+			"sending_data_left",
+			"sample_available_from_adc",
+			"dacdat",
+			"dacdatout",
+			"dbg_dacdat_signal",
+			"dbg_bclk_signal",
+			"dbg_dacdat_signal",
+			"dacdatout",
+			"sample_available_to_dac",
+			"sample_available_to_dac_signal",
+			"sample_available_to_dac",
+			"left_channel_sample_to_dac_int",
+			"sample_available_to_dac",
+			"dacdatout",
+			"dbg_daclrc_signal",
+			"dbg_adclrc_signal",
+			"sample_available_to_dac",
+			"dacdat",
+			"dacdatout",
+			"oAUD_DACDAT",
+			"dacdatout",
+			"dbg_dacdat_signal",
+			"integer",
+			"mid_re_natural",
+			"output_im2",
+			"output_re2",
+			"input_im2",
+			"input_re2",
+			"output_im2",
+			"output_re2",
+			"input_im2",
+			"input_re2",
+			"input_re1",
+			"size_exp",
+			"out_im1",
+			"in_im1",
+			"in_re1",
+			": ",
+			"fft_16",
+			"fft_16_impl",
+			"size_exp",
+			"testing_top_impl",
+			"testing_top",
+			";\n",
+			";  ",
+			"<= ",
+			"), ",
+			"signal",
+			"multed1_ext",
+			") ",
+			"in_re",
+			"in_im_ext_sum",
+			"in_re_ext_sum",
+			"in_im_ext_sum",
+			"in_im_ext_mult",
+			"in_im_ext",
+			"in_re_ext",
+			");\n",
+			"stages",
+			"after_stage_1sum_re",
+			"input_translated_re",
+			"bits_per_sample",
+			"iKEY",
+			"prog_done",
+			"1",
+			"iclk_counter",
+			"iclk_counter_max",
+			"signal",
+			"dbg_dacdat_signal",
+			"dacdat_counter",
+			"dacdat_counter_max",
+			"dbg_adcdat_signal",
+			"adcdat_counter",
+			"adcdat_counter_max",
+			"adcda_counter_max",
+			"dbg_adclrc_signal",
+			"adclrc_counter",
+			"adclrc_counter_max",
+			"AUD_ADCLRCK",
+			"adclrc_counter",
+			"adclrc_counter_max",
+			"AUD_ADCLRCK",
+			"dbg_bclk_signal",
+			"bclk_counter",
+			"bclk_counter_max",
+			"dacdat",
+			"start_operation",
+			"i2c_sclk_signal",
+			"finished_config",
+			"test_programming_done",
+			"transmitting_channels_to_dac",
+			"testingtop_impl",
+			"top_impl",
+			"top",
+			"sample_available_to_dac",
+			"redirecter_impl",
+			"redirecter",
+			"start_transmission",
+			"mclk_18MHz",
+			"oAUD_DACDAT",
+			"start_transmission"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/top.vhd",
+					"settings":
+					{
+						"buffer_size": 11147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3806,
+								7307
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime-vhdl/Syntaxes/VHDL.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5874.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/fft_input_former.vhd",
+					"settings":
+					{
+						"buffer_size": 3211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime-vhdl/Syntaxes/VHDL.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/fft_output_former.vhd",
+					"settings":
+					{
+						"buffer_size": 3282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1158,
+								3254
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime-vhdl/Syntaxes/VHDL.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 836.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 178.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 235.0,
+	"status_bar_visible": true
+}
