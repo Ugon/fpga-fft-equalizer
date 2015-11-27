@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity top is
 	generic (
-		number_of_samples:            integer := 16;
+		fft_size_exp:                 integer := 4;
 		bits_per_sample:              integer := 24);
 	port (
 		iCLK_28:                in    std_logic;    --28.63636MHz
@@ -39,6 +39,8 @@ entity top is
 end top;
 
 architecture top_impl of top is
+	constant number_of_samples:                   integer := 2**fft_size_exp;
+	
 	signal reset_n_signal:                        std_logic;
 	signal i2c_sclk_signal:                       std_logic;
 	signal dacdatout:                             std_logic;
@@ -266,9 +268,9 @@ begin
 		--red =>                         oVGA_R,
 		--green =>                       oVGA_G,
 		--blue =>                        oVGA_B);
-	REDIRECTOR: entity work.redirector
+	AUDIO_PROCESSOR: entity work.audio_processor
 	generic map (
-		number_of_samples =>             number_of_samples,
+		fft_size_exp =>                  fft_size_exp,
 		bits_per_sample =>               bits_per_sample)
 	port map (
 		reset_n =>                       reset_n_signal,
@@ -313,18 +315,20 @@ begin
 		i2c_sdat =>                      I2C_SDAT,
 		i2c_sclk =>                      i2c_sclk_signal);
 
-	FFT_INPUT_VECTOR_FORMER1: entity work.fft_input_former 
-	generic map (
-		number_of_samples =>             number_of_samples,
-		bits_per_sample =>               bits_per_sample)
-	port map (	
-		reset_n =>                       reset_n_signal,
-		sample_available_from_adc =>     sample_available_from_adc_signal,
-		left_channel_sample_from_adc =>  left_channel_sample_from_adc_signal,
-		right_channel_sample_from_adc => right_channel_sample_from_adc_signal,
+	--FFT_INPUT_VECTOR_FORMER1: entity work.fft_input_former 
+	--generic map (
+	--	number_of_samples =>             number_of_samples,
+	--	bits_per_sample =>               bits_per_sample)
+	--port map (	
+	--	reset_n =>                       reset_n_signal,
+	--	bclk =>                          AUD_BCLK,
 		
-		vector_left =>                   vector_left_signal,
-		vector_right =>                  vector_right_signal,
-		new_vector =>                    vector_available_signal);
+	--	sample_available_from_adc =>     sample_available_from_adc_signal,
+	--	left_channel_sample_from_adc =>  left_channel_sample_from_adc_signal,
+	--	right_channel_sample_from_adc => right_channel_sample_from_adc_signal,
+		
+	--	vector_left =>                   vector_left_signal,
+	--	vector_right =>                  vector_right_signal,
+	--	new_vector =>                    vector_available_signal);
 	
 end top_impl;
