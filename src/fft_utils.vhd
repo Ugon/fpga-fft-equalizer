@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-use work.fft_twiddle_factors_256.all;
+use work.fft_twiddle_factors_64.all;
 
 package fft_utils is
 	constant tw_size: integer := tw_size;
@@ -17,9 +17,15 @@ package fft_utils is
 
 	function bit_reverse(number: unsigned) return unsigned;
 
+	function bit_reverse(number: std_logic_vector) return std_logic_vector;
+
 	function negate_all(samples: std_logic_vector; number_of_samples: integer; bits_per_sample: integer) return std_logic_vector;
 
 	function shuffle(samples: std_logic_vector; fft_size_exp: integer; bits_per_sample: integer) return std_logic_vector;
+	
+	function divide_and_resize_all(samples: std_logic_vector; number_of_samples: integer; old_bits_per_sample: integer; divisor: integer; new_bits_per_sample: integer) return std_logic_vector;
+
+	function resize_all(samples: std_logic_vector; number_of_samples: integer; old_bits_per_sample: integer; new_bits_per_sample: integer) return std_logic_vector;
 
 end;
 
@@ -33,8 +39,8 @@ package body fft_utils is
 		out_re:       out signed;
 		out_im:       out signed)
 	is
-		constant tw_re:         signed(tw_size - 1 downto 0) := re_256(twiddle_num * 2**(tw_array_size_exp - fft_size_exp));
-		constant tw_im:         signed(tw_size - 1 downto 0) := im_256(twiddle_num * 2**(tw_array_size_exp - fft_size_exp));
+		constant tw_re:         signed(tw_size - 1 downto 0) := re_64(twiddle_num * 2**(tw_array_size_exp - fft_size_exp));
+		constant tw_im:         signed(tw_size - 1 downto 0) := im_64(twiddle_num * 2**(tw_array_size_exp - fft_size_exp));
 
 		variable multed1:       signed(in_re'length + tw_re'length - 1 downto 0);
 		variable multed2:       signed(in_im'length + tw_im'length - 1 downto 0);
@@ -80,6 +86,16 @@ package body fft_utils is
 		return reversed;
 	end function;
 
+	function bit_reverse(number: std_logic_vector) return std_logic_vector is
+		variable reversed: std_logic_vector(number'range);
+		alias number_alias: std_logic_vector(number'reverse_range) is number;
+	begin
+		for i in number_alias'range loop
+			reversed(i) := number_alias(i);
+		end loop;
+		return reversed;
+	end function;
+
 	function negate_all(samples: std_logic_vector; number_of_samples: integer; bits_per_sample: integer) return std_logic_vector is
 		variable negated: std_logic_vector(samples'length - 1 downto 0);
 	begin
@@ -98,6 +114,26 @@ package body fft_utils is
 			shuffled((reversed_i + 1) * bits_per_sample - 1 downto reversed_i * bits_per_sample) := std_logic_vector(signed(samples((i + 1) * bits_per_sample - 1 downto i * bits_per_sample)));
 		end loop;
 		return shuffled;
+	end function;
+
+	function divide_and_resize_all(samples: std_logic_vector; number_of_samples: integer; old_bits_per_sample: integer; divisor: integer; new_bits_per_sample: integer) return std_logic_vector is
+		variable output_vector: std_logic_vector(number_of_samples * new_bits_per_sample - 1 downto 0);
+	begin
+		for i in number_of_samples - 1 downto 0 loop
+			output_vector((i + 1) * (new_bits_per_sample) - 1 downto i * (new_bits_per_sample))
+				:= std_logic_vector(resize(signed(samples((i + 1) * old_bits_per_sample - 1 downto i * old_bits_per_sample)) / divisor, new_bits_per_sample));
+		end loop;
+		return output_vector;
+	end function;
+
+	function resize_all(samples: std_logic_vector; number_of_samples: integer; old_bits_per_sample: integer; new_bits_per_sample: integer) return std_logic_vector is
+		variable output_vector: std_logic_vector(number_of_samples * new_bits_per_sample - 1 downto 0);
+	begin
+		for i in number_of_samples - 1 downto 0 loop
+			output_vector((i + 1) * (new_bits_per_sample) - 1 downto i * (new_bits_per_sample))
+				:= std_logic_vector(resize(signed(samples((i + 1) * old_bits_per_sample - 1 downto i * old_bits_per_sample)), new_bits_per_sample));
+		end loop;
+		return output_vector;
 	end function;
 
 end package body;

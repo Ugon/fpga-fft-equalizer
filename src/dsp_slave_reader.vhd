@@ -7,7 +7,6 @@ use ieee.numeric_std.all;
 --18,432MHz MCLK 
 --BOSR = 1 (384fs)
 
-
 entity dsp_slave_reader is
 	generic (
 		number_of_samples:                   integer := 16;
@@ -17,7 +16,7 @@ entity dsp_slave_reader is
 		
 		left_channel_sample_from_adc:  out   signed(bits_per_sample - 1 downto 0) := (others => '0');
 		right_channel_sample_from_adc: out   signed(bits_per_sample - 1 downto 0) := (others => '0');
-		sample_available_from_adc:     out   std_logic           := '0';
+		sample_available_from_adc:     out   std_logic                            := '0';
 		
 		bclk:                          in    std_logic;
 		adclrc:                        in    std_logic;
@@ -33,8 +32,6 @@ architecture dsp_slave_reader_impl of dsp_slave_reader is
 	signal right_channel_sample_from_adc_int:signed(bits_per_sample - 1 downto 0);
 
 	signal bits_remaining:                   unsigned(7 downto 0);
-	
-signal test: std_logic;
 
 begin
 	left_channel_sample_from_adc <= left_channel_sample_from_adc_int;

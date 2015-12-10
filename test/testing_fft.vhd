@@ -49,67 +49,57 @@ architecture testing_fft_impl of testing_fft is
 	signal in_re:                    std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0);
 	signal in_im:                    std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0);
 
-	signal mid_re_shuffled:          std_logic_vector(number_of_samples * (bits_per_sample + fft_size_exp) - 1 downto 0);
-	signal mid_im_shuffled:          std_logic_vector(number_of_samples * (bits_per_sample + fft_size_exp) - 1 downto 0);
-
 	signal mid_re_natural:           std_logic_vector(number_of_samples * (bits_per_sample + fft_size_exp) - 1 downto 0);
 	signal mid_im_natural:           std_logic_vector(number_of_samples * (bits_per_sample + fft_size_exp) - 1 downto 0);
 
-	signal out_re_shuffled:          std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0);
-	signal out_im_shuffled:          std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0);
-
-	signal out_re:                   std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0);
-	signal out_im:                   std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0);
+	signal out_re_natural:           std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0);
+	signal out_im_natural:           std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0);
 	
 begin
 
 	in_re <=  in_re7  & in_re6  & in_re5  & in_re4  & in_re3  & in_re2  & in_re1  & in_re0;
 	in_im <=  in_im7  & in_im6  & in_im5  & in_im4  & in_im3  & in_im2  & in_im1  & in_im0;
 	
-	mid_re_natural <= shuffle(mid_re_shuffled, fft_size_exp, bits_per_sample + fft_size_exp);
-	mid_im_natural <= shuffle(mid_im_shuffled, fft_size_exp, bits_per_sample + fft_size_exp);
+	out_re7 <= out_re_natural(8 * bits_per_sample - 1 downto 7 * bits_per_sample);
+	out_re6 <= out_re_natural(7 * bits_per_sample - 1 downto 6 * bits_per_sample);
+	out_re5 <= out_re_natural(6 * bits_per_sample - 1 downto 5 * bits_per_sample);
+	out_re4 <= out_re_natural(5 * bits_per_sample - 1 downto 4 * bits_per_sample);
+	out_re3 <= out_re_natural(4 * bits_per_sample - 1 downto 3 * bits_per_sample);
+	out_re2 <= out_re_natural(3 * bits_per_sample - 1 downto 2 * bits_per_sample);
+	out_re1 <= out_re_natural(2 * bits_per_sample - 1 downto 1 * bits_per_sample);
+	out_re0 <= out_re_natural(1 * bits_per_sample - 1 downto 0 * bits_per_sample);
 
-	out_re <= shuffle(out_re_shuffled, fft_size_exp, bits_per_sample);
-	out_im <= shuffle(out_im_shuffled, fft_size_exp, bits_per_sample);
-
-	out_re7 <= out_re(8 * bits_per_sample - 1 downto 7 * bits_per_sample);
-	out_re6 <= out_re(7 * bits_per_sample - 1 downto 6 * bits_per_sample);
-	out_re5 <= out_re(6 * bits_per_sample - 1 downto 5 * bits_per_sample);
-	out_re4 <= out_re(5 * bits_per_sample - 1 downto 4 * bits_per_sample);
-	out_re3 <= out_re(4 * bits_per_sample - 1 downto 3 * bits_per_sample);
-	out_re2 <= out_re(3 * bits_per_sample - 1 downto 2 * bits_per_sample);
-	out_re1 <= out_re(2 * bits_per_sample - 1 downto 1 * bits_per_sample);
-	out_re0 <= out_re(1 * bits_per_sample - 1 downto 0 * bits_per_sample);
-
-	out_im7 <= out_im(8 * bits_per_sample - 1 downto 7 * bits_per_sample);
-	out_im6 <= out_im(7 * bits_per_sample - 1 downto 6 * bits_per_sample);
-	out_im5 <= out_im(6 * bits_per_sample - 1 downto 5 * bits_per_sample);
-	out_im4 <= out_im(5 * bits_per_sample - 1 downto 4 * bits_per_sample);
-	out_im3 <= out_im(4 * bits_per_sample - 1 downto 3 * bits_per_sample);
-	out_im2 <= out_im(3 * bits_per_sample - 1 downto 2 * bits_per_sample);
-	out_im1 <= out_im(2 * bits_per_sample - 1 downto 1 * bits_per_sample);
-	out_im0 <= out_im(1 * bits_per_sample - 1 downto 0 * bits_per_sample);
+	out_im7 <= out_im_natural(8 * bits_per_sample - 1 downto 7 * bits_per_sample);
+	out_im6 <= out_im_natural(7 * bits_per_sample - 1 downto 6 * bits_per_sample);
+	out_im5 <= out_im_natural(6 * bits_per_sample - 1 downto 5 * bits_per_sample);
+	out_im4 <= out_im_natural(5 * bits_per_sample - 1 downto 4 * bits_per_sample);
+	out_im3 <= out_im_natural(4 * bits_per_sample - 1 downto 3 * bits_per_sample);
+	out_im2 <= out_im_natural(3 * bits_per_sample - 1 downto 2 * bits_per_sample);
+	out_im1 <= out_im_natural(2 * bits_per_sample - 1 downto 1 * bits_per_sample);
+	out_im0 <= out_im_natural(1 * bits_per_sample - 1 downto 0 * bits_per_sample);
 
 	fft: entity work.fft_dif
 	generic map (
 		fft_size_exp => fft_size_exp,
-		bits_per_sample => bits_per_sample)
+		bits_per_sample => bits_per_sample,
+		output_natural_order => true)
 	port map (
 		input_re => in_re,
 		input_im => in_im,
 		
-		output_re => mid_re_shuffled,
-		output_im => mid_im_shuffled);
+		output_re => mid_re_natural,
+		output_im => mid_im_natural);
 	
 	ifft: entity work.ifft_dit
 	generic map (
 		fft_size_exp => fft_size_exp,
-		bits_per_sample => bits_per_sample)
+		bits_per_sample => bits_per_sample,
+		output_natural_order => true)
 	port map (
 		input_re => mid_re_natural,
 		input_im => mid_im_natural,
 		
-		output_re => out_re_shuffled,
-		output_im => out_im_shuffled);
+		output_re => out_re_natural,
+		output_im => out_im_natural);
 
 end testing_fft_impl;

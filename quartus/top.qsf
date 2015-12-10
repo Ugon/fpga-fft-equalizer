@@ -580,38 +580,36 @@ set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
 set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/dsp_slave_reader_test.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/dsp_slave_writer_test.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/fft_input_former_test.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/i2c_master_writer_test.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/mw8731_controller_test.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/redirector_test.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/testing_fft_test.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/testing_top_test.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/vga_controller_test.vwf
-set_global_assignment -name VHDL_FILE ../test/testing_fft.vhd
-set_global_assignment -name VHDL_FILE ../test/testing_top.vhd
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT FAST
+set_global_assignment -name QIP_FILE ../src/vga_pll/vga_pll.qip
+set_global_assignment -name QIP_FILE ../src/wm8731_pll/wm8731_pll.qip
+set_global_assignment -name VHDL_FILE ../src/audio_processor.vhd
 set_global_assignment -name VHDL_FILE ../src/dsp_slave_reader.vhd
 set_global_assignment -name VHDL_FILE ../src/dsp_slave_writer.vhd
 set_global_assignment -name VHDL_FILE ../src/fft_dif.vhd
-set_global_assignment -name VHDL_FILE ../src/fft_input_former.vhd
-set_global_assignment -name VHDL_FILE ../src/fft_output_former.vhd
-set_global_assignment -name VHDL_FILE ../src/fft_twiddle_factors_256.vhd
+set_global_assignment -name VHDL_FILE ../src/fft_input_deserializer.vhd
+set_global_assignment -name VHDL_FILE ../src/fft_output_serializer.vhd
+set_global_assignment -name VHDL_FILE ../src/fft_twiddle_factors_64.vhd
 set_global_assignment -name VHDL_FILE ../src/fft_utils.vhd
 set_global_assignment -name VHDL_FILE ../src/i2c_clk_prescaler.vhd
 set_global_assignment -name VHDL_FILE ../src/i2c_master_writer.vhd
 set_global_assignment -name VHDL_FILE ../src/ifft_dit.vhd
 set_global_assignment -name VHDL_FILE ../src/mw8731_controller.vhd
-set_global_assignment -name VHDL_FILE ../src/redirector.vhd
 set_global_assignment -name VHDL_FILE ../src/top.vhd
 set_global_assignment -name VHDL_FILE ../src/vga_controller.vhd
 set_global_assignment -name VHDL_FILE ../src/vga_image_generator.vhd
-set_global_assignment -name QIP_FILE ../src/vga_pll/vga_pll.qip
-set_global_assignment -name QIP_FILE ../src/wm8731_pll/wm8731_pll.qip
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/fft_output_former_test.vwf
-set_global_assignment -name VHDL_FILE ../src/audio_processor.vhd
+set_global_assignment -name VHDL_FILE ../src/vga_image_refresh_rate_prescaler.vhd
+set_global_assignment -name VHDL_FILE ../src/vga_utils.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/audio_processor_test.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ../test/audio_processor_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/dsp_slave_reader_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/dsp_slave_writer_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/fft_input_deserializer_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/fft_output_serializer_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/i2c_master_writer_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/mw8731_controller_test.vwf
+set_global_assignment -name VHDL_FILE ../test/testing_fft.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../test/testing_fft_test.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ../test/mw8731_controller_test.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"

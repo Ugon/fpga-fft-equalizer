@@ -9,8 +9,9 @@ use work.fft_utils.all;
 entity fft_dif is
 	generic(
 		stages_done:                  integer := 1;
-		fft_size_exp:                 integer := 3; --2**fft_size_exp = size (size = number_of_samples)
-		bits_per_sample:              integer := 24);
+		fft_size_exp:                 integer := 3;
+		bits_per_sample:              integer := 16;
+		output_natural_order:         boolean := false);
 	port(
 		input_re:   in  std_logic_vector(2**fft_size_exp * bits_per_sample - 1 downto 0);
 		input_im:   in  std_logic_vector(2**fft_size_exp * bits_per_sample - 1 downto 0);
@@ -39,6 +40,9 @@ architecture fft_dif_impl of fft_dif is
 	signal output_im1:       std_logic_vector(size   * (bits_per_sample + fft_size_exp) - 1 downto size/2 * (bits_per_sample + fft_size_exp));
 	signal output_re0:       std_logic_vector(size/2 * (bits_per_sample + fft_size_exp) - 1 downto 0);
 	signal output_im0:       std_logic_vector(size/2 * (bits_per_sample + fft_size_exp) - 1 downto 0);
+
+	signal joined_re:        std_logic_vector(2**fft_size_exp * (bits_per_sample + fft_size_exp) - 1 downto 0);
+	signal joined_im:        std_logic_vector(2**fft_size_exp * (bits_per_sample + fft_size_exp) - 1 downto 0);
 
 begin
 	edge_case: if fft_size_exp = 0 generate
@@ -95,15 +99,26 @@ begin
 	
 		input_re0 <= stage_done_re(size/2 * (bits_per_sample + 1) - 1 downto 0);
 		input_im0 <= stage_done_im(size/2 * (bits_per_sample + 1) - 1 downto 0);
+
+		joined_re <= output_re1 & output_re0;
+		joined_im <= output_im1 & output_im0;
 	
-		output_re <= output_re1 & output_re0;
-		output_im <= output_im1 & output_im0;
+		process (joined_re, joined_im) begin
+			if (output_natural_order) then
+				output_re <= shuffle(joined_re, fft_size_exp, bits_per_sample + fft_size_exp);
+				output_im <= shuffle(joined_im, fft_size_exp, bits_per_sample + fft_size_exp);
+			else 
+				output_re <= joined_re;
+				output_im <= joined_im;
+			end if;
+		end process;
 	
 		fft1: entity work.fft_dif
 		generic map (
 			stages_done => stages_done + 1,
 			fft_size_exp => fft_size_exp - 1,
-			bits_per_sample => bits_per_sample + 1)
+			bits_per_sample => bits_per_sample + 1,
+			output_natural_order => false)
 		port map (
 			input_re => input_re1,
 			input_im => input_im1,
@@ -115,7 +130,8 @@ begin
 		generic map (
 			stages_done => stages_done + 1,
 			fft_size_exp => fft_size_exp - 1,
-			bits_per_sample => bits_per_sample + 1)
+			bits_per_sample => bits_per_sample + 1,
+			output_natural_order => false)
 		port map (
 			input_re => input_re0,
 			input_im => input_im0,

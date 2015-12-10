@@ -4,14 +4,14 @@ use ieee.numeric_std.all;
 
 entity i2c_master_writer is
 	port (
-		clk:                  in    std_logic; --transmission clock
+		clk:                  in    std_logic;
 		reset_n:              in    std_logic;
 		
 		address:              in    std_logic_vector(6 downto 0);
 		byte1:                in    std_logic_vector(7 downto 0);
 		byte2:                in    std_logic_vector(7 downto 0);
 		
-		transmission_start:   in    std_logic; --starts transmission at rising edge
+		transmission_start:   in    std_logic;
 		transmission_ongoing: out   std_logic := '0';
 
 		i2c_sdat:             out   std_logic := 'Z';

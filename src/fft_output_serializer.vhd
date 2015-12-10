@@ -2,10 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity fft_output_former is
+entity fft_output_serializer is
 	generic (
-		number_of_samples:          integer := 3; --for testing 3
-		bits_per_sample:            integer := 2); --for testing 2
+		number_of_samples:          integer := 3;
+		bits_per_sample:            integer := 2);
 	port (
 		reset_n:                     in  std_logic;
 		bclk:                        in  std_logic;
@@ -18,9 +18,9 @@ entity fft_output_former is
 		vector_left:                 in  std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0) := (others => '0');
 		vector_right:                in  std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0) := (others => '0');
 		new_vector:                  in  std_logic := '0');
-end fft_output_former;
+end fft_output_serializer;
 
-architecture fft_output_former_impl of fft_output_former is
+architecture fft_output_serializer_impl of fft_output_serializer is
 	signal vector_left_int:       std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0) := (others => '0');
 	signal vector_right_int:      std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0) := (others => '0');
 
@@ -44,7 +44,7 @@ begin
 		end if;
 	end process;
 
-	process(reset_n, get_next_sample)
+	process(reset_n, get_next_sample, started, vector_left_latched, vector_right_latched)
 		variable samples_remaining: integer := number_of_samples;
 	begin
 		if (reset_n = '0' or started = '0') then
@@ -76,7 +76,7 @@ begin
 		end if;
 	end process;
 
-	process (reset_n, bclk)
+	process (reset_n, bclk, trigger_delay)
 		variable state: integer := 0;
 		variable last_trigger_delay: std_logic := trigger_delay;
 	begin
@@ -97,4 +97,4 @@ begin
 		end if;
 	end process;
 
-end fft_output_former_impl;
+end fft_output_serializer_impl;

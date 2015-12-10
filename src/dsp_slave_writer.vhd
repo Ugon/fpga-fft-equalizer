@@ -16,12 +16,12 @@ entity dsp_slave_writer is
 		
 		left_channel_sample_to_dac:  in    signed(bits_per_sample - 1 downto 0);
 		right_channel_sample_to_dac: in    signed(bits_per_sample - 1 downto 0);
-		sample_available_to_dac:     in    std_logic; --latches on rising edge
-		transmission_to_dac_ongoing: out   std_logic                            := '0';
+		sample_available_to_dac:     in    std_logic;
+		transmission_to_dac_ongoing: out   std_logic := '0';
 
 		bclk:                        in    std_logic;
 		daclrc:                      in    std_logic;
-		dacdat:                      out   std_logic                            := '0');
+		dacdat:                      out   std_logic := '0');
 end dsp_slave_writer;
 
 architecture dsp_slave_writer_impl of dsp_slave_writer is
@@ -47,7 +47,7 @@ begin
 		end if;
 	end process;
 
-	process(reset_n, bclk)
+	process(reset_n, bclk, state)
 	begin
 		if (reset_n = '0') then
 			both_samples_to_dac_int <= (others => '0');
@@ -63,10 +63,10 @@ begin
 		elsif (falling_edge(bclk)) then 
 			case state is
 				when waiting_for_daclrc =>
-					--MAGIA. JAK TE 2 LINIJKI WCIAGNE DO IF TO NIE DZIALA
+					--TE 2 LINIJKI WCIAGNE DO IF TO NIE DZIALA
 					bits_remaining <= to_unsigned(2 * bits_per_sample, bits_remaining'length);
 					both_samples_to_dac_int <= both_samples_to_dac_latched(both_samples_to_dac_latched'length - 2 downto 0) & '0';
-					--MAGIA. JAK TE 2 LINIJKI WCIAGNE DO IF TO NIE DZIALA
+					--TE 2 LINIJKI WCIAGNE DO IF TO NIE DZIALA
 					if (daclrc_used = not daclrc_occured) then
 						daclrc_used <= daclrc_occured;
 						dacdat <= both_samples_to_dac_latched(2 * bits_per_sample - 1); --first left channel bit
