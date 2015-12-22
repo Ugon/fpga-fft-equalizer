@@ -154,7 +154,7 @@ begin
 						i2c_transmission_start <= '0';
 					else
 						i2c_byte1 <= "00000100";
-						i2c_byte2 <= "01100111";                 --VOLUME[6:0] (1111001 default +0dB)
+						i2c_byte2 <= "01100100";                 --VOLUME[6:0] (1111001 default +0dB)
 						i2c_transmission_start <= '1';
 						state <= reg0000011;					
 					end if;	
@@ -163,7 +163,7 @@ begin
 						i2c_transmission_start <= '0';
 					else
 						i2c_byte1 <= "00000110";
-						i2c_byte2 <= "01100111";                 --VOLUME[6:0] (1111001 default +0dB)
+						i2c_byte2 <= "01100100";                 --VOLUME[6:0] (1111001 default +0dB)
 						i2c_transmission_start <= '1';
 						state <= reg0000100;					
 					end if;						
